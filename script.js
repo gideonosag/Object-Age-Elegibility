@@ -4,7 +4,7 @@ const gideon = {
   firstName: "Gideon",
   lastName: "Efosa",
   job: "Software Developer",
-  age: 2026 - 2009,
+  age: 2026 - 2003,
   friends: ["Tope", "Bola", "Tife", "Caleb"],
   location: "United Kingdom",
 };
@@ -30,13 +30,14 @@ function about(note) {
 
   // Granting access due to age to the informations in the objects due to the age elegibilty of the age value in the objcet.
 
-  const message =
-    gideon.age >= 20
-      ? prompt(
-          `${greetings}, What information do you need? Choose between firstName, lastName, job, age, friends, and location`,
-        )
-      : `${greetings}, sorry you're not yet elegible tyo access this information`;
+  const message = prompt(
+    `${greetings}, What information do you need? Choose between firstName, lastName, job, age, friends, and location`,
+  );
 
-  return message;
+  if (gideon[message]) {
+    return gideon[message];
+  } else {
+    return `${greetings}, the information you're asking is outside our reach. Please choose between firstName, lastName, job, age, friends, and location.`;
+  }
 }
 console.log(about("Gideon"));
