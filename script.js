@@ -8,12 +8,15 @@ const gideon = {
   friends: ["Tope", "Peculiar", "Tife", "Caleb"],
   location: "United Kingdom",
   hasBritishPassport: true,
-  calcAge: function (birthYear) {
-    return 2026 - birthYear;
+  // calcAge: function (birthYear) {
+  //   return 2026 - birthYear;
+  // },
+  calcAge: function () {
+    return 2026 - this.birthYear;
   },
 };
 
-console.log( gideon.calcAge(gideon.birthYear));
+console.log(gideon.calcAge());
 // console.log(gideon.calcAge);
 
 // Dot notation.
