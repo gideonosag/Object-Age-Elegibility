@@ -20,15 +20,32 @@ function about(note) {
 
   // An operation/expression inside a bracket notation that produces a value.
 
-  console.log(gideon["first" + namekey]);
-  console.log(gideon["last" + namekey]);
+  const nameFirst = gideon["first" + namekey];
+  const nameSecond = gideon["last" + namekey];
+
+  // Challenge
+
+  // Gideon has 3 friends, and his best friend is called Tope.
+  // Get the name, 3 friends and the best friend.
+
+  console.log(nameFirst);
+
+  const getGideonFriends = gideon.friends;
+  console.log(
+    getGideonFriends[0],
+    getGideonFriends[1],
+    getGideonFriends[2],
+    getGideonFriends[3],
+  );
+
+  console.log(gideon.friends[0]); // Challenge ends here.
 
   const concatNames =
     gideon["first" + namekey] + " " + gideon["last" + namekey];
 
   const greetings = `Hello ${concatNames}`;
 
-  // Granting access due to age to the informations in the objects due to the age elegibilty of the age value in the objcet.
+  // Retrieving elements from the object gideon.
 
   const message = prompt(
     `${greetings}, What information do you need? Choose between firstName, lastName, job, age, friends, and location`,
@@ -40,4 +57,5 @@ function about(note) {
     return `${greetings}, the information you're asking is outside our reach. Please choose between firstName, lastName, job, age, friends, and location.`;
   }
 }
-console.log(about("Gideon"));
+
+console.log(about("aboutGideon"));
