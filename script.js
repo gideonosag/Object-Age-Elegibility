@@ -4,10 +4,17 @@ const gideon = {
   firstName: "Gideon",
   lastName: "Efosa",
   job: "Software Developer",
-  age: 2026 - 2003,
+  birthYear: 2002,
   friends: ["Tope", "Peculiar", "Tife", "Caleb"],
   location: "United Kingdom",
+  hasBritishPassport: true,
+  calcAge: function (birthYear) {
+    return 2026 - birthYear;
+  },
 };
+
+console.log( gideon.calcAge(gideon.birthYear));
+// console.log(gideon.calcAge);
 
 // Dot notation.
 
@@ -28,7 +35,9 @@ function about(note) {
   // Gideon has 3 friends, and his best friend is called Tope.
   // Rewrite the sentence above.
 
-  console.log(`${gideon.firstName} has ${gideon.firstName.length} friends, and his best friend is called ${gideon.friends[1]}`);
+  console.log(
+    `${gideon.firstName} has ${gideon.firstName.length} friends, and his best friend is called ${gideon.friends[1]}`,
+  );
 
   // const getGideonFriends = gideon.friends;
   // console.log(
