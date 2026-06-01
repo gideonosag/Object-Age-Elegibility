@@ -5,7 +5,7 @@ const gideon = {
   lastName: "Efosa",
   job: "Software Developer",
   age: 2026 - 2003,
-  friends: ["Tope", "Bola", "Tife", "Caleb"],
+  friends: ["Tope", "Peculiar", "Tife", "Caleb"],
   location: "United Kingdom",
 };
 
@@ -26,19 +26,21 @@ function about(note) {
   // Challenge
 
   // Gideon has 3 friends, and his best friend is called Tope.
-  // Get the name, 3 friends and the best friend.
+  // Rewrite the sentence above.
 
-  console.log(nameFirst);
+  console.log(`${gideon.firstName} has ${gideon.firstName.length} friends, and his best friend is called ${gideon.friends[1]}`);
 
-  const getGideonFriends = gideon.friends;
-  console.log(
-    getGideonFriends[0],
-    getGideonFriends[1],
-    getGideonFriends[2],
-    getGideonFriends[3],
-  );
+  // const getGideonFriends = gideon.friends;
+  // console.log(
+  //   getGideonFriends[0],
+  //   getGideonFriends[1],
+  //   getGideonFriends[2],
+  //   getGideonFriends[3],
+  // );
 
-  console.log(gideon.friends[0]); // Challenge ends here.
+  // console.log(gideon.friends[0]);
+
+  // Challenge ends here.
 
   const concatNames =
     gideon["first" + namekey] + " " + gideon["last" + namekey];
