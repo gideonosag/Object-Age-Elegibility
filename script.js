@@ -3,20 +3,31 @@
 const gideon = {
   firstName: "Gideon",
   lastName: "Efosa",
-  job: "Software Developer",
+  job: "Software developer",
   birthYear: 2002,
   friends: ["Tope", "Peculiar", "Tife", "Caleb"],
   location: "United Kingdom",
   hasBritishPassport: true,
+
   // calcAge: function (birthYear) {
   //   return 2026 - birthYear;
-  // },
+  // }
+
   calcAge: function () {
-    return 2026 - this.birthYear;
+    this.age = 2026 - this.birthYear;
+    return this.age;
+  },
+
+  // Challenge: Print this string on the summary method: "Gideon is a 23-year old Software developer, and he has a british passport."
+
+  getSummary: function () {
+    this.summary = `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasBritishPassport ? "a" : "no"} British Passport.`;
+    return this.summary;
   },
 };
 
 console.log(gideon.calcAge());
+console.log(gideon.getSummary());
 // console.log(gideon.calcAge);
 
 // Dot notation.
@@ -72,4 +83,4 @@ function about(note) {
   }
 }
 
-console.log(about("aboutGideon"));
+// console.log(about("aboutGideon"));
